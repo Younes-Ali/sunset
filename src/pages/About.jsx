@@ -1,0 +1,21 @@
+import HeroAbout from "../components/HeroAbout";
+import Story from "../components/Story";
+import Team from "../components/Team";
+import Values from "../components/Values";
+
+export default function About() {
+
+  return (
+    <div className="font-sans text-gray-900 bg-white">
+      {/* Hero Section */}
+      <HeroAbout />
+      {/* Our Story Section */}
+      <Story />
+
+      {/* Our Values Section */}
+      <Values />
+      {/* Our Team Section */}
+      <Team />
+    </div>
+  );
+}
