@@ -7,3 +7,6 @@
   --font-dancing-script: 'Dancing Script', cursive;
   --color-creamy: #f8f8f7;
 }
+
+
+@variant dark (&:where(.dark, .dark *));
