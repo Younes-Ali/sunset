@@ -36,6 +36,16 @@ const ForecastPage = () => {
     }
   }, [isDark]);
 
+
+  useEffect(() => {
+    const savedCity = localStorage.getItem('lastSearchedCity');
+    if (savedCity) {
+      fetchWeatherData(savedCity);
+    } else {
+      fetchWeatherData('London');
+    }
+  }, []);
+
   // Fetch weather data for a city using axios
   const fetchWeatherData = async (city) => {
     setIsLoading(true);
@@ -70,6 +80,8 @@ const ForecastPage = () => {
       }).slice(0, 7);
 
       setForecast(dailyForecasts);
+
+      localStorage.setItem('lastSearchedCity', city);
     } catch (err) {
       if (err.response) {
         // The request was made and the server responded with a status code
@@ -102,7 +114,7 @@ const ForecastPage = () => {
 
   // Initial load - fetch weather for a default city
   useEffect(() => {
-    fetchWeatherData('London');
+    fetchWeatherData(localStorage.getItem('lastSearchedCity')||'London');
   }, []);
 
   return (

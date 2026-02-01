@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ForecastPage from "./pages/ForecastPage";
+import CausesAndSolutions from "./pages/CausesAndSolutions";
 
 export default function App() {
   return (
@@ -28,6 +29,12 @@ export default function App() {
               path="/forecast"
               element={
                 <ForecastPage />
+              }
+            />
+            <Route
+              path="/causes&solutions"
+              element={
+                <CausesAndSolutions />
               }
             />
           </Route>

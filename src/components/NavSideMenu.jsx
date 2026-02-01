@@ -23,7 +23,7 @@ export default function NavSideMenu() {
                     aria-label="close sidebar"
                     className="drawer-overlay"
                 ></label>
-                <div className="bg-linear-to-b font-dancing-script from-gray-900 to-gray-800 min-h-full w-64 p-6 shadow-2xl">
+                <div className="bg-linear-to-b font-sans from-gray-900 to-gray-800 min-h-full w-64 p-6 shadow-2xl">
                     {/* Header */}
                     <div className="flex justify-between items-center mb-8">
                         <h2 className="text-2xl font-bold text-white">MENU</h2>
@@ -57,20 +57,29 @@ export default function NavSideMenu() {
                         </li>
                         <li>
                             <Link 
-                                to="/contact" 
-                                onClick={closeDrawer}
-                                className="text-white hover:bg-creamy hover:text-black hover:translate-x-2 rounded-lg p-3 transition-all duration-300 text-lg font-medium hover:shadow-lg"
-                            >
-                                Contact
-                            </Link>
-                        </li>
-                        <li>
-                            <Link 
                                 to="/forecast" 
                                 onClick={closeDrawer}
                                 className="text-white hover:bg-creamy hover:text-black hover:translate-x-2 rounded-lg p-3 transition-all duration-300 text-lg font-medium hover:shadow-lg"
                             >
                                 Forecast
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                to="/causes&solutions" 
+                                onClick={closeDrawer}
+                                className="text-white hover:bg-creamy hover:text-black hover:translate-x-2 rounded-lg p-3 transition-all duration-300 text-lg font-medium hover:shadow-lg"
+                            >
+                                Causes & Solutions
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                to="/contact" 
+                                onClick={closeDrawer}
+                                className="text-white hover:bg-creamy hover:text-black hover:translate-x-2 rounded-lg p-3 transition-all duration-300 text-lg font-medium hover:shadow-lg"
+                            >
+                                Contact
                             </Link>
                         </li>
                     </ul>

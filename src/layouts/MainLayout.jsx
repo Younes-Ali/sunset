@@ -1,10 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import NavSideMenu from "../components/NavSideMenu";
-import { FaShoppingCart } from "react-icons/fa";
-import Cart from "../pages/Cart";
-import { useState } from "react";
-import { cartProducts } from "../components/store";
 
 export default function MainLayout() {
     const location = useLocation();

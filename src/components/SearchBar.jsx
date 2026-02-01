@@ -20,6 +20,7 @@ export default function SearchBar ({ onSearch, isLoading }) {
         <input
             type="text"
             placeholder="Enter city name..."
+            id='inputCity'
             className="text-white dark:text-black flex-1 px-4 py-3 border-2 dark:border-blue-300 border-gray-600 dark:bg-white bg-gray-800 rounded-lg focus:outline-none placeholder:text-white focus:border-blue-500 transition"
             value={city}
             onChange={(e) => setCity(e.target.value)}

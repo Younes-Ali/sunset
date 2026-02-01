@@ -14,6 +14,9 @@ export default function NavBar() {
             <NavLink className={({isActive})=> `${linkStyle} ` + (isActive ? 'border-2 border-creamy' : " ")} to={'/forecast'}>
                 Forecast
             </NavLink>
+            <NavLink className={({isActive})=> `${linkStyle} ` + (isActive&&'border-2 border-creamy')} to={'/causes&solutions'}>
+                Causes & Solutions
+            </NavLink>
             <NavLink className={({isActive})=> `${linkStyle} ` + (isActive&&'border-2 border-creamy')} to={'/contact'}>
                 Contact Us
             </NavLink>
